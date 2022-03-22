@@ -1,0 +1,46 @@
+
+/*Animación*/
+
+.animar {
+    animation-name: animacion;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+
+}
+
+.animar2 {
+    animation-name: animacion2;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}
+
+@keyframes animacion {
+    0% {
+        opacity: 0;
+        color: white;
+
+    }
+
+    30% {
+        color: white;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes animacion2 {
+    from {
+        transform: translateX(-300px);
+        color: white;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

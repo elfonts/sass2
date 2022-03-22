@@ -1,0 +1,69 @@
+
+/*Tablet*/
+@media (min-width: 481px) and (max-width:1023px) {
+
+    #gridAreas {
+        display: grid;
+        grid-template-areas:
+            /*Fila 1*/
+            "cabeza cabeza"
+            /*Fila 2*/
+            "menu menu"
+            /*Fila 3*/
+            "productos productos"
+            /*Fila 4*/
+            "servicios servicios"
+            /*Fila 4*/
+            "pie pie"
+        ;
+
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+    }
+
+
+}
+
+/*Smartphone*/
+
+@media (max-width: 480px) {
+    #gridAreas {
+        display: grid;
+        grid-template-areas:
+            /*Fila 1*/
+            "cabeza"
+            /*Fila 2*/
+            "menu"
+            /*Fila 3*/
+            "productos "
+            /*Fila 4*/
+            "servicios"
+            /*Fila 5*/
+            "pie"
+        ;
+
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+    }
+
+    span {
+        background-color: rgb(209, 209, 209);
+        margin-bottom: 5px;
+    }
+
+    /*flex*/
+    .flexMenu {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .flexHeader {
+        padding: 5px;
+    }
+
+}

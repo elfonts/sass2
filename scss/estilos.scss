@@ -1,8 +1,279 @@
-// Esto es un comentario de línea
-/* esto es un comentario de bloque puro*/
-/*comentario*/
+// Linea 16 a la 86 SASS 2
 
-/*Prueba*/
+/*prueba de Sass*/
+
+/*Box Model*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Responsive*/
+
+/*Desktop*/
+
+//arimetica
+$ancho: 100%;
+$alto: 100vh;
+
+//Bucles (linea 87)
+
+//Condicionales (revisar línea 67)
+
+$mobile: 578px;
+$tablet: 992px;
+$desktop: 1200px;
+//Extends (revisar linea 219)
+
+// Mixin  (revisar linea 246) 
+$divAncho:500px;
+$divAlto:500px;
+
+//Each y Maps (revisar linea 266)
+
+body {
+    width: calc($ancho);
+    height: calc($alto);
+
+    nav {
+        padding: 20px;
+        margin-top: 0px;
 
 
+    }
+
+    span {
+        background-color: rgb(209, 209, 209);
+        padding: 10px 35px;
+        text-align: center;
+        border-radius: 20px;
+        align-content: center;
+        margin-left: 10px;
+
+        &:hover {
+            border-left: solid 5px rgb(0, 175, 175);
+            background-color: rgb(32, 158, 167);
+            color: honeydew;
+
+
+        }
+    }
+
+    article {
+        img {
+            width: $alto;
+        }
+    }
+}
+
+
+section {
+    #servicios {
+
+        p {
+            @if expr {
+                width: calc($ancho /2);
+                color: black;
+                margin: 10px;
+            }
+
+            text-align: justify;
+            justify-content: center;
+            margin: 5px;
+            padding: 20px
+        }
+    }
+}
+
+
+
+//Bucles (linea 87)
+
+@for $i from 1 through 6 {
+    .prueba-#{$i} {
+        font: 20px + $i;
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+h2 {
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: gray;
+    font-size: 20px;
+    text-align: left;
+    margin: 5px;
+
+}
+
+
+
+footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.border {
+    border: solid 10px rgb(255, 255, 255);
+    background-color: rgb(243, 243, 243);
+}
+
+.cabeza {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.article {
+    width: 200px;
+}
+
+
+
+#servicios {
+    background-image: url(../img/back3.jpg);
+    margin: 5px;
+}
+
+/*Transicion (cambiar article a section*/
+
+
+
+
+
+
+
+
+/*Grid*/
+
+#gridAreas {
+    display: grid;
+    grid-template-areas:
+        /*Fila 1*/
+        "cabeza cabeza cabeza"
+        /*Fila 2*/
+        "menu menu menu"
+        /*Fila 3*/
+        "productos productos productos"
+        /*Fila 4*/
+        "servicios servicios servicios"
+        /*Fila 4*/
+        "pie pie pie"
+    ;
+
+    grid-template-columns: 15% auto 10%;
+    grid-template-rows: 1fr 1fr 3fr 1fr 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+
+/* Nombrar cada area */
+
+header {
+    grid-area: cabeza;
+
+}
+
+footer {
+    grid-area: pie;
+}
+
+#productos {
+    grid-area: productos;
+}
+
+#servicios {
+    grid-area: servicios;
+}
+
+nav {
+    grid-area: menu;
+}
+
+
+article {
+    margin: 5px;
+    padding: 5px;
+    background-color: floralwhite;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+article p {
+    text-align: center;
+}
+
+
+/*flex - gradiente */
+// Ej Extends
+
+.flexMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexMenuExtend {
+    @extend .flexMenu;
+    border: blue;
+}
+
+.flexHeader {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(white 50%, rgb(226, 226, 226) 90%);
+
+
+}
+
+//Import
+@import "animacion";
+@import "responsive";
+
+//Mixin 
+@mixin mediaDiv {
+    width: $alto;
+    height: $ancho;
+    margin-top: 5px;
+    padding: 10px;
+
+}
+
+.box-1 {
+    @include mediaDiv;
+}
+
+.box-2 {
+    @include mediaDiv;
+}
+
+.box-3 {
+    @include mediaDiv;
+}
+
+//Mapas y Each
+
+$valorMap :(
+Tarot: red,
+Nosotros: blue,
+Terapias: green,
+Contacto: yellow,
+);
+
+@each $secciones, $colores in $valorMap {
+.seccion-#{$secciones} {   
+background-color: $colores;
+border: $colores;
+}
+}
 

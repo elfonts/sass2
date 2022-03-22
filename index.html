@@ -1,13 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" a href="./css/estilos.css">
-    <title>SASS</title>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--SEO-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--Keywords-->
+  <meta name="Keywords" content="Constelacion, tarot, flores de bach, terapias, lectura, cartas " />
+<!--Titulos-->
+  <title>Conestar: Inicio de sesión</title>
+<!--Descripción-->
+<meta name="description" content="Sitio dedicado a las terapias complementarias, lectura de cartas, constelación familiar y flores de Bach " />
+
+
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/estilos.css">
 </head>
-<body>
-    
+
+<body id="gridAreas">
+  <header class="border flexHeader container-fluid">
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.svg" alt="" width="150" class="d-inline-block align-text-top">
+          Terapias
+        </a>
+      </div>
+    </nav>
+
+
+  </header>
+  <section id="productos" class="container-fluid border">
+    <article>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/b1.jpg" class="d-block w-100" alt="arbol de la vida">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Constelación Familiar</h5>
+              <p>Es hora de sanar tus heridas de infancia.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/b2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tarot</h5>
+              <p>Descubre tu sanación en las cartas</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/b3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Carta Astral</h5>
+              <p>Naciste en el momento indicado</p>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/b4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Flores de Bach</h5>
+              <p>Una respuesta, una flor</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </article>
+  </section>
+  <section id="servicios" class="border">
+    <h3 class="animar">Qué tarot Elegir</h3> <br>
+    <p class="animar2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget dolor dui. Curabitur
+      bibendum vestibulum velit non maximus. In hac habitasse platea dictumst. Curabitur at sapien eu nunc efficitur
+      interdum eget et orci. Duis nec consectetur eros. In sodales aliquam tortor, id laoreet ex lobortis vitae. Donec
+      quis viverra tellus. Maecenas ullamcorper magna a nulla iaculis porta. Ut non lorem gravida, sollicitudin dolor
+      ut, tincidunt lorem. Pellentesque vulputate eros augue, in bibendum eros lobortis non. Morbi eu lorem felis. Etiam
+      vitae viverra metus.
+
+    </p>
+
+  </section>
+  <nav class="border flexMenu">
+
+    <span>Nosotros</span>
+    <span>Tarot</span>
+    <span>Terapias</span>
+    <span>Contacto</span>
+
+  </nav>
+
+  <footer class="border">Sitio Diseñado por Roger Fuentes</footer>
+  <script src="./bootstrap/js/bootstrap.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,299 @@
-/* esto es un comentario de bloque puro*/
-/*comentario*/
-/*Prueba*/
+@charset "UTF-8";
+/*prueba de Sass*/
+/*Box Model*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Responsive*/
+/*Desktop*/
+body {
+  width: 100%;
+  height: 100vh;
+}
+body nav {
+  padding: 20px;
+  margin-top: 0px;
+}
+body span {
+  background-color: #d1d1d1;
+  padding: 10px 35px;
+  text-align: center;
+  border-radius: 20px;
+  align-content: center;
+  margin-left: 10px;
+}
+body span:hover {
+  border-left: solid 5px #00afaf;
+  background-color: #209ea7;
+  color: honeydew;
+}
+body article img {
+  width: 100vh;
+}
+
+section #servicios p {
+  width: 50%;
+  color: black;
+  margin: 10px;
+  text-align: justify;
+  justify-content: center;
+  margin: 5px;
+  padding: 20px;
+}
+
+.prueba-1 {
+  font: 21px;
+  margin: 5px;
+  text-align: center;
+}
+
+.prueba-2 {
+  font: 22px;
+  margin: 5px;
+  text-align: center;
+}
+
+.prueba-3 {
+  font: 23px;
+  margin: 5px;
+  text-align: center;
+}
+
+.prueba-4 {
+  font: 24px;
+  margin: 5px;
+  text-align: center;
+}
+
+.prueba-5 {
+  font: 25px;
+  margin: 5px;
+  text-align: center;
+}
+
+.prueba-6 {
+  font: 26px;
+  margin: 5px;
+  text-align: center;
+}
+
+h2 {
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+}
+
+h3 {
+  color: gray;
+  font-size: 20px;
+  text-align: left;
+  margin: 5px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+}
+
+.border {
+  border: solid 10px white;
+  background-color: #f3f3f3;
+}
+
+.cabeza {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.article {
+  width: 200px;
+}
+
+#servicios {
+  background-image: url(../img/back3.jpg);
+  margin: 5px;
+}
+
+/*Transicion (cambiar article a section*/
+/*Grid*/
+#gridAreas {
+  display: grid;
+  grid-template-areas: "cabeza cabeza cabeza" "menu menu menu" "productos productos productos" "servicios servicios servicios" "pie pie pie";
+  grid-template-columns: 15% auto 10%;
+  grid-template-rows: 1fr 1fr 3fr 1fr 10%;
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+}
+
+/* Nombrar cada area */
+header {
+  grid-area: cabeza;
+}
+
+footer {
+  grid-area: pie;
+}
+
+#productos {
+  grid-area: productos;
+}
+
+#servicios {
+  grid-area: servicios;
+}
+
+nav {
+  grid-area: menu;
+}
+
+article {
+  margin: 5px;
+  padding: 5px;
+  background-color: floralwhite;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+article p {
+  text-align: center;
+}
+
+/*flex - gradiente */
+.flexMenu, .flexMenuExtend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexMenuExtend {
+  border: blue;
+}
+
+.flexHeader {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(white 50%, #e2e2e2 90%);
+}
+
+/*Animación*/
+.animar {
+  animation-name: animacion;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+
+.animar2 {
+  animation-name: animacion2;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+
+@keyframes animacion {
+  0% {
+    opacity: 0;
+    color: white;
+  }
+  30% {
+    color: white;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animacion2 {
+  from {
+    transform: translateX(-300px);
+    color: white;
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "cabeza cabeza" "menu menu" "productos productos" "servicios servicios" "pie pie";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+  }
+}
+/*Smartphone*/
+@media (max-width: 480px) {
+  #gridAreas {
+    display: grid;
+    grid-template-areas: "cabeza" "menu" "productos " "servicios" "pie";
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 3fr 2fr 10%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+  }
+
+  span {
+    background-color: #d1d1d1;
+    margin-bottom: 5px;
+  }
+
+  /*flex*/
+  .flexMenu, .flexMenuExtend {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flexHeader {
+    padding: 5px;
+  }
+}
+.box-1 {
+  width: 100vh;
+  height: 100%;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.box-2 {
+  width: 100vh;
+  height: 100%;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.box-3 {
+  width: 100vh;
+  height: 100%;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.seccion-Tarot {
+  background-color: red;
+  border: red;
+}
+
+.seccion-Nosotros {
+  background-color: blue;
+  border: blue;
+}
+
+.seccion-Terapias {
+  background-color: green;
+  border: green;
+}
+
+.seccion-Contacto {
+  background-color: yellow;
+  border: yellow;
+}
 
 /*# sourceMappingURL=estilos.css.map */

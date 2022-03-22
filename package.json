@@ -1,11 +1,19 @@
 {
-  "name": "sass2",
+  "name": "fuentes_sass",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elfonts/conestar.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elfonts/conestar/issues"
+  },
+  "homepage": "."
 }
