@@ -25,6 +25,10 @@ body span {
   align-content: center;
   margin-left: 10px;
 }
+body span a {
+  text-decoration: none;
+  color: black;
+}
 body span:hover {
   border-left: solid 5px #00afaf;
   background-color: #209ea7;
@@ -182,6 +186,47 @@ article p {
   background-image: radial-gradient(white 50%, #e2e2e2 90%);
 }
 
+.box-1 {
+  width: 100vh;
+  height: 100%;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.box-2 {
+  width: 100vh;
+  height: 100%;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.box-3 {
+  width: 100vh;
+  height: 100%;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.seccion-Tarot {
+  background-color: red;
+  border: red;
+}
+
+.seccion-Nosotros {
+  background-color: blue;
+  border: blue;
+}
+
+.seccion-Terapias {
+  background-color: green;
+  border: green;
+}
+
+.seccion-Contacto {
+  background-color: yellow;
+  border: yellow;
+}
+
 /*Animación*/
 .animar {
   animation-name: animacion;
@@ -254,46 +299,6 @@ article p {
   .flexHeader {
     padding: 5px;
   }
-}
-.box-1 {
-  width: 100vh;
-  height: 100%;
-  margin-top: 5px;
-  padding: 10px;
-}
-
-.box-2 {
-  width: 100vh;
-  height: 100%;
-  margin-top: 5px;
-  padding: 10px;
-}
-
-.box-3 {
-  width: 100vh;
-  height: 100%;
-  margin-top: 5px;
-  padding: 10px;
-}
-
-.seccion-Tarot {
-  background-color: red;
-  border: red;
-}
-
-.seccion-Nosotros {
-  background-color: blue;
-  border: blue;
-}
-
-.seccion-Terapias {
-  background-color: green;
-  border: green;
-}
-
-.seccion-Contacto {
-  background-color: yellow;
-  border: yellow;
 }
 
 /*# sourceMappingURL=estilos.css.map */
